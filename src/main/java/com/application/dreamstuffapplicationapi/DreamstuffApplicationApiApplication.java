@@ -7,10 +7,11 @@ import io.swagger.v3.oas.annotations.info.License;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
 
 @EntityScan("com.application.dreamstuffapplicationapi.models")
-@SpringBootApplication
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 @OpenAPIDefinition(
 		info = @Info(
 				title = "DREAMSTUFF.IND APPLICATION API",
